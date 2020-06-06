@@ -46,6 +46,12 @@ AOP 기능을 제공한다. 웹 어플리케이션을 개발할 때 사용하는
 **spring-beans** | 스프링 컨테이너를 이용해서 객체를 생성하는 기본 기능을 제공한다.
 **spring-context** | 객체 생성, 라이프 사이클 처리, 스키마 확장 등의 기능을 제공한다.
 **spring-aop** | AOP(Aspect Oriented Programming) 기능을 제공한다.
-**spring-web**  | REST 클라이언트, 데이터 변환 처리, 서블릿 필터, 파일업로드 <br> 지원등 웹 개발에 필요한 기반 기능을 제공한다.
-               
+**spring-web**  | REST 클라이언트, 데이터 변환 처리, 서블릿 필터, 파일업로드 지원등 <br>웹 개발에 필요한 기반 기능을 제공한다.
 **spring-webmvc** | 스프링기반의 MVC 프레임워크이다. 웹 어플리케이션을 개발하는데
+**spring-websocket** | 스프링MVC에서 웹 소켓 연동을 처리할 수 있도록 한다.
+**spring-oxm** | XML과 자바 객체 간의 매핑을 처리하기 위한 API를 제공한다.
+**spring-tx** | 트랜잭션 처리를 위한 추상 레이어를 제공한다.
+**spring-jdbc** | JDBC 프로그래밍을 보다 쉽게 할 수 있는 템플릿을 제공한다.
+**spring-orm** | 하이버네이트,JPA,MyBatis 등과의 연동을 지원한다.
+**spring-jms** | JMS 서버와 메세지를 쉽게 주고 받을 수 있도록 하기 위한 템플릿, <br> 애노테이션 등을 제공한다.
+**spring-context-support** | 스케줄링, 메일발송, 캐시연동, 벨로시티 등 부가 기능을 제공한다.
