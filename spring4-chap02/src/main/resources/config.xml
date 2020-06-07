@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
-	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config />
+	<context:component-scan base-package="net.madvirus.spring4.chap04.shop" />
 
 	<bean id="user1" class="net.madvirus.spring4.chap02.User">
 		<constructor-arg value="bkchoi" />
@@ -26,18 +32,30 @@
 
 	<bean id="pwChangeSvc"
 		class="net.madvirus.spring4.chap02.PasswordChangeService">
-		<constructor-arg><ref bean = "userRepository"/></constructor-arg>
+		<constructor-arg>
+			<ref bean="userRepository" />
+		</constructor-arg>
 	</bean>
-	
-	<bean id="authFailLogger" class="net.madvirus.spring4.chap02.AuthFailLogger">
-		<property name="threshold" value="2"/>
+
+	<bean id="authFailLogger"
+		class="net.madvirus.spring4.chap02.AuthFailLogger">
+		<property name="threshold" value="2" />
 	</bean>
-	
+
 	<bean id="authenticationService"
 		class="net.madvirus.spring4.chap02.AuthenticationService">
 		<property name="userRepository" ref='userRepository' />
-		<property name="failLogger" ref="authFailLogger" />	
-		 
+		<property name="failLogger" ref="authFailLogger" />
+
 	</bean>
+
+	<bean id="searchClientFactory"
+		class="net.madvirus.spring4.chap02.search.SearchClientFactoryBean">
+		<property name="server" value="10.20.30.40" />
+		<property name="port" value="8888" />
+		<property name="contentType" value="json" />
+	</bean>
+	
+	
 
 </beans>
