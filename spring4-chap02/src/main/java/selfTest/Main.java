@@ -7,7 +7,7 @@ public class Main {
 		Assembler assembler = new Assembler();
 		
 		//Assembler에서 생성된 A타입 객체를 가져옴
-		A a = assembler.getA();
+//		A a = assembler.getA();
 	}
 
 }
