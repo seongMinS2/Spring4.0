@@ -39,7 +39,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.30</version>
+			<version>8.0.16</version>
 		</dependency>
 
 		<!-- JTA 환경 설정 테스트 위한 의존 -->
